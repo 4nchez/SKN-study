@@ -7,8 +7,9 @@ __pycache__/
 venv/ 
 env/ 
 
-# VS Code 
+# VS Code and IDE 
 .vscode/ 
+.idea/
 
 # Jupyter 
 .ipynb_checkpoints/
