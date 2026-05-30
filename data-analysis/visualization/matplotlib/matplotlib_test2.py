@@ -1,4 +1,4 @@
-# path : ./test_matplotlib/matplotlib_test2.py
+# path : ./matplotlib/matplotlib_test2.py
 # 여러 종류의 그래프 확인 스크립트
 
 import matplotlib as mpl

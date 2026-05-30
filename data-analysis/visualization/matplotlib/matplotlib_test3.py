@@ -1,4 +1,4 @@
-# path : ./test_matplotlib/matplotlib_test3.py
+# path : ./matplotlib/matplotlib_test3.py
 # matplotlib.pyplot 의 그래프별 속성 / 인수 사용 테스트
 
 import os

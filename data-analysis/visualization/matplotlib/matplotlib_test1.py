@@ -1,4 +1,4 @@
-# path: ./test_matplotlib/matplotlib_test1.py
+# path: ./matplotlib/matplotlib_test1.py
 # matplotlib 모듈 사용한 시각화 테스트 스크립트
 
 # 패키지 추가 설치 : pip install matplotlib

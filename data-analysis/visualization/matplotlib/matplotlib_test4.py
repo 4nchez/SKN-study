@@ -1,4 +1,4 @@
-# path: ./test_matplotlib/matplotlib_test4.py
+# path: ./matplotlib/matplotlib_test4.py
 # pandas DataFrame 과 시각화 연계 처리 테스트 스크립트
 
 import pandas as pd

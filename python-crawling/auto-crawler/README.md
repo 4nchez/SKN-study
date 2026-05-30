@@ -3,7 +3,7 @@ Cron 형식, Windows 작업 스케줄러, schedule 모듈, APScheduler의 interv
 특히 APScheduler는 작업 추가, 시작, 일시정지, 삭제 등 운영형 스케줄링에 적합하므로 이 프로젝트에서는 BackgroundScheduler를 사용합니다.
 
 1. 프로젝트 구조
-auto_crawler/
+auto-crawler/
 │- .venv
 ├─ app.py
 ├─ crawler.py
@@ -14,7 +14,7 @@ auto_crawler/
 └─ .env
 
 실행 방법 :
-cd auto_crawler_project
+cd auto-crawler
 python -m venv venv
 venv\Scripts\activate
 

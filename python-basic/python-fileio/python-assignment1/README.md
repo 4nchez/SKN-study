@@ -1,5 +1,5 @@
 [파이썬 과제 1]<br>
-프로젝트명 : python_assignment1
+프로젝트명 : python-assignment1
 
 프로젝트 구조 :
 ```

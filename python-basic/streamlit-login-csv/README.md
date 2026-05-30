@@ -15,9 +15,9 @@ streamlit run app/main.py
 ```
 
 ## 프로젝트 구조
-프로젝트명 : streamlit_login_csv_project
+프로젝트명 : streamlit-login-csv-project
 ```
-streamlit_login_csv_project/
+streamlit-login-csv-project/
 ├── .venv/                     # 가상환경 폴더
 ├── requirements.txt           # 외부 모듈 설치 목록 파일
 ├── README.md                  # 프로젝트 설명 파일
