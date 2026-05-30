@@ -1,0 +1,11 @@
+# requirements.txt
+# 설치할 외부 모듈(라이브러리) 목록
+# 모듈이름 또는 모듈이름>=버전숫자 또는 모듈이름=버전숫자
+# 팀 프로젝트에서 다른 팀원들도 동일한 모듈을 설치해야 한다면, 이 파일을 제공함
+# pip install -r requirements.txt
+streamlit>=1.50.0
+pandas=2.2.0
+matplotlib
+numpy
+pillow
+scikit-learn
