@@ -12,10 +12,10 @@ from common.exceptions import DBException
 class MySQLTemplate:
   # field
   HOST = 'localhost'    # 클라우드 public ip 지정
-  PORT = 3306
-  DB = 'mydb'
-  USER = 'student'
-  PASSWD = 'Student80*'
+  PORT = None
+  DB = ''
+  USER = ''
+  PASSWD = ''
   
   @staticmethod
   @contextmanager    # app 관리자로 등록함

@@ -25,20 +25,20 @@ def get_engine():
     host = os.getenv("DB_HOST", "localhost")
 
     # .env 파일에서 DB_PORT 값을 읽는다.
-    # 값이 없으면 MySQL 기본 포트인 "3306"을 사용한다.
-    port = os.getenv("DB_PORT", "3306")
+    # 값이 없으면 MySQL 기본 포트인 ""을 사용한다.
+    port = os.getenv("DB_PORT", "")
 
     # .env 파일에서 DB_USER 값을 읽는다.
-    # 값이 없으면 기본값으로 "student"를 사용한다.
-    user = os.getenv("DB_USER", "student")
+    # 값이 없으면 기본값으로 ""를 사용한다.
+    user = os.getenv("DB_USER", "")
 
     # .env 파일에서 DB_PASSWORD 값을 읽는다.
-    # 값이 없으면 기본값으로 "Student80*"를 사용한다.
-    password = os.getenv("DB_PASSWORD", "Student80*")
+    # 값이 없으면 기본값으로 ""를 사용한다.
+    password = os.getenv("DB_PASSWORD", "")
 
     # .env 파일에서 DB_NAME 값을 읽는다.
-    # 값이 없으면 기본값으로 "mydb"를 사용한다.
-    db_name = os.getenv("DB_NAME", "mydb")
+    # 값이 없으면 기본값으로 ""를 사용한다.
+    db_name = os.getenv("DB_NAME", "")
 
     # SQLAlchemy가 MySQL에 접속하기 위한 DB URL을 만든다.
     #
