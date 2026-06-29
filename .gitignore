@@ -1,6 +1,7 @@
-# Python cache 
-__pycache__/ 
-*.py[cod] 
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
 
 # Virtual environment 
 .venv/ 
@@ -10,16 +11,32 @@ env/
 # VS Code and IDE 
 .vscode/ 
 .idea/
+*.iml
 
 # Jupyter 
 .ipynb_checkpoints/
+
+# Model artifacts
+models/*.pt
+models/*.pkl
+
+
+# Data
+data/
 
 # OS files 
 .DS_Store 
 Thumbs.db 
 
 # Environment files 
-.env 
+.env
+env/
+ENV/
 
 # ETC...
 *.exe
+*.ttf
+*.csv
+#*.txt
+*.xlsx
+
