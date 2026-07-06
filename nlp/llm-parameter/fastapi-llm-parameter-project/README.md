@@ -10,11 +10,10 @@ http://127.0.0.1:8000/
 
 ## 1. 주요 기능
 
-- Gemini 기본 호출 테스트
+- Gemini/OpenAI 기본 호출 테스트
 - 시스템 지시로 역할과 말투 변경 테스트
 - temperature 값에 따른 답변 다양성 측정
 - 한국어/영어 토큰 사용량 비교
-- OpenAI 호환 호출 구조 테스트
 - `app/static/index.html` 기반 간단 UI 제공
 
 ---
