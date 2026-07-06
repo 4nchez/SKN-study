@@ -133,16 +133,19 @@ http://127.0.0.1:8000/
 
 UI는 아래 API를 JavaScript로 호출합니다.
 
-| 메서드 | URL | 설명 |
-|---|---|---|
-| GET | `/` | UI 페이지 |
-| GET | `/api/system/health` | 서버 상태 확인 |
-| GET | `/api/system/env` | 환경변수 로드 상태 확인 |
-| POST | `/api/llm/gemini/basic` | Gemini 기본 호출 |
-| POST | `/api/llm/gemini/role` | 시스템 지시 역할 테스트 |
-| POST | `/api/llm/gemini/diversity` | temperature 다양성 테스트 |
-| POST | `/api/llm/gemini/token-compare` | 한국어/영어 토큰 비교 |
-| POST | `/api/llm/openai/chat` | OpenAI 호출 테스트 |
+| 메서드 | URL                             | 설명                  |
+|---|---------------------------------|---------------------|
+| GET | `/`                             | UI 페이지              |
+| GET | `/api/system/health`            | 서버 상태 확인            |
+| GET | `/api/system/env`               | 환경변수 로드 상태 확인       |
+| POST | `/api/llm/gemini/basic`         | Gemini 기본 호출        |
+| POST | `/api/llm/gemini/role`          | 시스템 지시 역할 테스트       |
+| POST | `/api/llm/gemini/diversity`     | temperature 다양성 테스트 |
+| POST | `/api/llm/gemini/token-compare` | 한국어/영어 토큰 비교        |
+| POST | `/api/llm/openai/basic`         | OpenAI 기본 호출        |
+| POST | `/api/llm/openai/role`          | 시스템 지시 역할 테스트       |
+| POST | `/api/llm/openai/diversity`     | temperature 다양성 테스트 |
+| POST | `/api/llm/openai/token-compare` | 한국어/영어 토큰 비교        |
 
 Swagger도 유지되어 있으므로 필요하면 다음 주소에서 확인할 수 있습니다.
 
