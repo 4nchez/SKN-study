@@ -22,3 +22,6 @@ python-dotenv>=1.0.0
 
 # Google Gemini 임베딩으로 전환할 때 사용합니다. 기본 실습은 local이라 API 키 없이 실행됩니다.
 langchain-google-genai>=1.0.0
+
+# OpenAI 임베딩으로 전환할 때 사용합니다. 기본 실습은 local이라 API 키 없이 실행됩니다.
+langchain-openai>=0.2.0

@@ -73,6 +73,9 @@ def get_embeddings() -> Embeddings:  # 설정값에 따라 임베딩 객체를 �
     if EMBEDDING_BACKEND == "google":  # 실제 Google Gemini 임베딩을 사용하도록 설정한 경우입니다.
         from langchain_google_genai import GoogleGenerativeAIEmbeddings  # Google 임베딩 클래스를 필요할 때만 불러옵니다.
         return GoogleGenerativeAIEmbeddings(model=os.getenv("GOOGLE_EMBEDDING_MODEL", "models/gemini-embedding-2"))  # Google 임베딩 객체를 반환합니다.
+    elif EMBEDDING_BACKEND == "openai":
+        from langchain_openai import OpenAIEmbeddings
+        return OpenAIEmbeddings(model=os.getenv("OPENAI_EMBEDDING_MODEL", "text-embedding-3-small"))
     return LocalHashEmbeddings(dim=LOCAL_EMBEDDING_DIM)  # 기본값은 API 키 없이 동작하는 로컬 해시 임베딩입니다.
 
 
