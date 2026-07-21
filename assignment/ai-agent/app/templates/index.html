@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ app_name }}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<main class="container">
+    <header>
+        <h1>Business Agent</h1>
+        <p>ReAct → RAG → A2A → LangGraph → MCP 통합 FastAPI 앱</p>
+    </header>
+    <section class="panel controls">
+        <label>LLM 공급자
+            <select id="provider"><option value="openai">OpenAI</option><option value="gemini">Gemini</option></select>
+        </label>
+        <label>Thread ID<input id="threadId" value="business-session"></label>
+    </section>
+    <section class="panel">
+        <label for="message">질문</label>
+        <label>
+            Prompt 유형
+            <select id="promptType">
+                <option value="">
+                    선택하세요
+                </option>
+                <option value="basic">
+                    기본 Prompt
+                </option>
+                <option value="expert">
+                    전문가 Prompt
+                </option>
+                <option value="friendly">
+                    친절한 설명 Prompt
+                </option>
+                <option value="step_by_step">
+                    단계별 사고 Prompt
+                </option>
+                <option value="json">
+                    JSON 출력 Prompt
+                </option>
+            </select>
+        </label>
+
+        <textarea id="message" rows="5" placeholder="예: 2026-05 월간 매출 보고서와 차트를 생성해 줘"></textarea>
+        <button id="sendButton">통합 에이전트 실행</button>
+    </section>
+    <section class="panel">
+        <h2>답변</h2>
+        <pre id="answer">질문을 입력하세요.</pre>
+    </section>
+    <section class="panel grid">
+        <div><h2>실행 경로</h2><pre id="route">-</pre></div>
+        <div><h2>실행 추적</h2><pre id="trace">-</pre></div>
+    </section>
+    <footer><a href="/docs" target="_blank">Swagger 열기</a> · <a href="/api/v1/a2a/agents" target="_blank">A2A 카드</a></footer>
+</main>
+<script>
+  // HTML 파일 안에서는 Jinja 문법이 정상 작동합니다.
+  window.promptPresets = JSON.parse({{ prompt_data | tojson }});
+</script>
+<script src="/static/app.js"></script>
+</body>
+</html>
