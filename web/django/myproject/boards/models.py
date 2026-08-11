@@ -47,7 +47,7 @@ class Board(models.Model):
 
 
     def __str__(self):
-        return self.title + ", " + self.author_id
+        return self.title + ", " + self.author_id.__str__()
 
 
     # 수정 권한에 대한 메서드 추가
