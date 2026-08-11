@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <title>게시글 {{ mode }}</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block title %}게시글 {{ mode }}{% endblock %}
+
+{% block content %}
     <h1>게시글 {{ mode }}</h1>
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">{{ mode }} 하기</button>
     </form>
-</body>
-</html>
+{% endblock %}

@@ -12,11 +12,17 @@ from django.shortcuts import render, redirect
 # 회원 관련 Form입니다.
 from .forms import SignUpForm, LoginForm
 
+# home 화면에 최근 게시글 출력을 위해 Board 모델을 가져옴
+from boards.models import Board
 
 def home(request):
     """로그인 여부와 관계없이 접근 가능한 첫 화면을 출력합니다."""
+    # ORM을 이용해 최근 게시글 5개만 조회해 옴
+    recent_posts = Board.objects.select_related("author").all()[:5]
+
     # 로그인 성공시 Django가 자동으로 request.user 정보를 Template에 전달
-    return render(request, "home.html")
+
+    return render(request, "home.html", {"recent_posts": recent_posts})
 
 
 def signup_view(request):

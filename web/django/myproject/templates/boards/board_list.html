@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <title>게시판</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block title %}게시판{% endblock %}
+
+{% block content %}
     <h1>게시판</h1>
 {#    <!-- 로그인한 경우에만 글쓰기 버튼 보여지게 함 -->#}
     {% if user.is_authenticated %}
@@ -23,5 +21,4 @@
         <p>게시글이 없습니다.</p>
 
     {% endfor %}
-</body>
-</html>
+{% endblock %}
