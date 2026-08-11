@@ -19,6 +19,7 @@ from django.contrib import admin
 # include 는 App별 urls.py를 연결할 때 사용함
 from django.urls import path, include
 
+import boards
 from members.views import home
 
 urlpatterns = [
@@ -33,5 +34,11 @@ urlpatterns = [
     path(
         'members/',
         include('members.urls', namespace="members")
-    )
+    ),
+
+    # boards 앱에 대한 urls 추가
+    path(
+        'boards/',
+        include('boards.urls', namespace="boards")
+    ),
 ]

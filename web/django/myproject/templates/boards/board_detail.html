@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ board.title }}</title>
+</head>
+<body>
+    <h1>{{ board.title }}</h1>
+    <p>작성자: {{ board.author.display_name }}</p>
+    <p>조회수: {{ board.read_count }}</p>
+    <hr>
+
+    <div>{{ board.content }}</div>
+    <p>{{ board.attachment }}</p>
+    <hr>
+
+    <!-- 로그인한 사용자와 작성자가 같으면 수정 버튼 보이게 함 -->
+    {% if user == board.author %}
+        <a href="{% url 'boards:update' board.pk %}">수정 페이지로 이동</a>
+    {% endif %}
+
+    <!-- 글삭제는 본인이거나 관리자이면 삭제 버튼 제공 -->
+    {% if user == board.author or user.is_staff or user.is_superuser %}
+        <form action="{% url 'boards:delete' board.pk %}" method="post">
+            {% csrf_token %}
+            <button type="submit">글삭제</button>
+        </form>
+    {% endif %}
+
+    <!-- 목록으로 이동 -->
+    <a href="{% url 'boards:list' %}">목록</a>
+</body>
+</html>
