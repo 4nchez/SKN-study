@@ -182,6 +182,9 @@ STATIC_URL = 'static/'
 # 프로젝트의 static 폴더 위치 등록
 STATICFILES_DIRS = [BASE_DIR / 'static']
 
+# 배포용 위치 등록
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 # 사용자가 업로드한 파일을 요청할 URL임
 MEDIA_URL = 'media/'
 
